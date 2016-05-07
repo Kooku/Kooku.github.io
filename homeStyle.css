@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Doodle';
+    src: url("../Fonts/JuneGloom.ttf");
+}
+
+h1 {
+    font-family: 'Doodle';
+    font-size: 56px;
+    color: green;
+}
+
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right; auto;
+    width: 1200px;
+}
+
