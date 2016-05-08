@@ -5,25 +5,30 @@
 
 h1 {
     font-family: 'Doodle';
-    font-size: 56px;
+    font-size: 100px;
     color: green;
 }
 
-.outer {
-    display: table;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
-
 .middle {
-    display: table-cell;
-    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    width: 30%;
+    margin-top: -124.5px;
 }
 
-.inner {
-    margin-left: auto;
-    margin-right; auto;
-    width: 1200px;
+
+.top {
+    position: absolute;
+    left: 50%;
+    margin-left: -80px;
 }
 
+.bottom {
+    position: absolute;
+    left: 50%;
+    margin-left: -80px;
+    align: bottom;
+    margin-top: 100px;
+    transform: rotate(180deg);
+}
