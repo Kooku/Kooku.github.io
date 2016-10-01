@@ -1,33 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
+        Testing Website
     </head>
     <body>
-        <div class="middle">
-	    <link rel="stylesheet" type="text/css" href="homeStyle.css">
-            <h1>Ku Young Shin</h1>
-	</div>
-    <div>
-        <a class=top href="resume/resume.pdf" download>
-            <img src="images/arrow.png" alt="Top Arrow">
-            <span><br>Resume</span>
-        </a>
-    </div>
-	<div class="bottom">
-        <a href=""></a>
-	    <span>About me</span><br>
-	    <img src="images/arrow.png" alt="Bottom Arrow">
-	</div>
-	
-	<div class="left">
-	    <img src="images/arrow.png" alt="Left Arrow">
-	    <span>Fun Stuff</span>
-	</div>
-
-	<div class="right">
-	    <span>Projects</span>
-	    <img src="images/arrow.png" alt="Right Arrow">
-	</div>
+        <div class="text wrapper">
+            <label>Text box</label>
+            <input type = "text"
+                   id = "myText"
+                   value = "" />
+        </div>
+        <button onclick="spitNum()">Click Me!</button>
+        <script>
+            var num = 0;
+            function spitNum() {
+                console.log(num);
+                num = num + 1;
+            }
+        </script>
     </body>
 </html>
