@@ -1,22 +1,907 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        Testing Website
-    </head>
-    <body>
-        <div class="text wrapper">
-            <label>Text box</label>
-            <input type = "text"
-                   id = "myText"
-                   value = "" />
-        </div>
-        <button onclick="spitNum()">Click Me!</button>
-        <script>
-            var num = 0;
-            function spitNum() {
-                console.log(num);
-                num = num + 1;
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if IE 9]>         <html class="lt-ie10" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html xmlns:fb="http://ogp.me/ns/fb#">
+<!--<![endif]-->
+
+<head>
+    <!--
+
+    Data center: navyyard
+    Server name:
+    uophlpapp06-store03
+ear: urban_rel_2016.07-1598_20160912
+
+    Release tag: 
+    Manifest Trac: #20160912_11
+-->
+    <meta charset="ISO-8859-1">
+    <!-- mp_trans_add
+<meta name="google-site-verification" content="3jEt3jbVf3Xgnoi1oc3OzVrDmJjMAl4wVXhoUADYVrI" />
+-->
+    <meta name="generator" content="UOPHLPAPP06.phl.ecomm.urbanout.com store03">
+    <meta name="application-name" content="urbanoutfitters.com">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Always open, always awesome. Clothing, accessories and apartment items for men and women.">
+    <meta property="og:title" content="Urban Outfitters" />
+    <meta property="og:description" content="Always open, always awesome. Clothing, accessories and apartment items for men and women." />
+    <meta property="og:image" content="http://www.urbanoutfitters.com/urban/images/OG-default.jpg" />
+    <title>Urban Outfitters</title>
+    <script type="text/javascript">
+    window.NREUM || (NREUM = {}), __nr_require = function(t, e, n) {
+        function r(n) {
+            if (!e[n]) {
+                var o = e[n] = {
+                    exports: {}
+                };
+                t[n][0].call(o.exports, function(e) {
+                    var o = t[n][1][e];
+                    return r(o || e)
+                }, o, o.exports)
             }
+            return e[n].exports
+        }
+        if ("function" == typeof __nr_require) return __nr_require;
+        for (var o = 0; o < n.length; o++) r(n[o]);
+        return r
+    }({
+        1: [function(t, e, n) {
+            function r() {}
+
+            function o(t, e, n) {
+                return function() {
+                    return i(t, [(new Date).getTime()].concat(u(arguments)), e ? null : this, n), e ? void 0 : this
+                }
+            }
+            var i = t("handle"),
+                a = t(2),
+                u = t(3),
+                c = t("ee").get("tracer"),
+                f = NREUM;
+            "undefined" == typeof window.newrelic && (newrelic = f);
+            var s = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit"],
+                p = "api-",
+                l = p + "ixn-";
+            a(s, function(t, e) {
+                f[e] = o(p + e, !0, "api")
+            }), f.addPageAction = o(p + "addPageAction", !0), e.exports = newrelic, f.interaction = function() {
+                return (new r).get()
+            };
+            var d = r.prototype = {
+                createTracer: function(t, e) {
+                    var n = {},
+                        r = this,
+                        o = "function" == typeof e;
+                    return i(l + "tracer", [Date.now(), t, n], r),
+                        function() {
+                            if (c.emit((o ? "" : "no-") + "fn-start", [Date.now(), r, o], n), o) try {
+                                return e.apply(this, arguments)
+                            } finally {
+                                c.emit("fn-end", [Date.now()], n)
+                            }
+                        }
+                }
+            };
+            a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function(t, e) {
+                d[e] = o(l + e)
+            }), newrelic.noticeError = function(t) {
+                "string" == typeof t && (t = new Error(t)), i("err", [t, (new Date).getTime()])
+            }
+        }, {}],
+        2: [function(t, e, n) {
+            function r(t, e) {
+                var n = [],
+                    r = "",
+                    i = 0;
+                for (r in t) o.call(t, r) && (n[i] = e(r, t[r]), i += 1);
+                return n
+            }
+            var o = Object.prototype.hasOwnProperty;
+            e.exports = r
+        }, {}],
+        3: [function(t, e, n) {
+            function r(t, e, n) {
+                e || (e = 0), "undefined" == typeof n && (n = t ? t.length : 0);
+                for (var r = -1, o = n - e || 0, i = Array(o < 0 ? 0 : o); ++r < o;) i[r] = t[e + r];
+                return i
+            }
+            e.exports = r
+        }, {}],
+        ee: [function(t, e, n) {
+            function r() {}
+
+            function o(t) {
+                function e(t) {
+                    return t && t instanceof r ? t : t ? u(t, a, i) : i()
+                }
+
+                function n(n, r, o) {
+                    t && t(n, r, o);
+                    for (var i = e(o), a = l(n), u = a.length, c = 0; c < u; c++) a[c].apply(i, r);
+                    var s = f[m[n]];
+                    return s && s.push([w, n, r, i]), i
+                }
+
+                function p(t, e) {
+                    g[t] = l(t).concat(e)
+                }
+
+                function l(t) {
+                    return g[t] || []
+                }
+
+                function d(t) {
+                    return s[t] = s[t] || o(n)
+                }
+
+                function v(t, e) {
+                    c(t, function(t, n) {
+                        e = e || "feature", m[n] = e, e in f || (f[e] = [])
+                    })
+                }
+                var g = {},
+                    m = {},
+                    w = {
+                        on: p,
+                        emit: n,
+                        get: d,
+                        listeners: l,
+                        context: e,
+                        buffer: v
+                    };
+                return w
+            }
+
+            function i() {
+                return new r
+            }
+            var a = "nr@context",
+                u = t("gos"),
+                c = t(2),
+                f = {},
+                s = {},
+                p = e.exports = o();
+            p.backlog = f
+        }, {}],
+        gos: [function(t, e, n) {
+            function r(t, e, n) {
+                if (o.call(t, e)) return t[e];
+                var r = n();
+                if (Object.defineProperty && Object.keys) try {
+                    return Object.defineProperty(t, e, {
+                        value: r,
+                        writable: !0,
+                        enumerable: !1
+                    }), r
+                } catch (i) {}
+                return t[e] = r, r
+            }
+            var o = Object.prototype.hasOwnProperty;
+            e.exports = r
+        }, {}],
+        handle: [function(t, e, n) {
+            function r(t, e, n, r) {
+                o.buffer([t], r), o.emit(t, e, n)
+            }
+            var o = t("ee").get("handle");
+            e.exports = r, r.ee = o
+        }, {}],
+        id: [function(t, e, n) {
+            function r(t) {
+                var e = typeof t;
+                return !t || "object" !== e && "function" !== e ? -1 : t === window ? 0 : a(t, i, function() {
+                    return o++
+                })
+            }
+            var o = 1,
+                i = "nr@id",
+                a = t("gos");
+            e.exports = r
+        }, {}],
+        loader: [function(t, e, n) {
+            function r() {
+                if (!h++) {
+                    var t = y.info = NREUM.info,
+                        e = s.getElementsByTagName("script")[0];
+                    if (t && t.licenseKey && t.applicationID && e) {
+                        c(m, function(e, n) {
+                            t[e] || (t[e] = n)
+                        });
+                        var n = "https" === g.split(":")[0] || t.sslForHttp;
+                        y.proto = n ? "https://" : "http://", u("mark", ["onload", a()], null, "api");
+                        var r = s.createElement("script");
+                        r.src = y.proto + t.agent, e.parentNode.insertBefore(r, e)
+                    }
+                }
+            }
+
+            function o() {
+                "complete" === s.readyState && i()
+            }
+
+            function i() {
+                u("mark", ["domContent", a()], null, "api")
+            }
+
+            function a() {
+                return (new Date).getTime()
+            }
+            var u = t("handle"),
+                c = t(2),
+                f = window,
+                s = f.document,
+                p = "addEventListener",
+                l = "attachEvent",
+                d = f.XMLHttpRequest,
+                v = d && d.prototype;
+            NREUM.o = {
+                ST: setTimeout,
+                CT: clearTimeout,
+                XHR: d,
+                REQ: f.Request,
+                EV: f.Event,
+                PR: f.Promise,
+                MO: f.MutationObserver
+            }, t(1);
+            var g = "" + location,
+                m = {
+                    beacon: "bam.nr-data.net",
+                    errorBeacon: "bam.nr-data.net",
+                    agent: "js-agent.newrelic.com/nr-974.min.js"
+                },
+                w = d && v && v[p] && !/CriOS/.test(navigator.userAgent),
+                y = e.exports = {
+                    offset: a(),
+                    origin: g,
+                    features: {},
+                    xhrWrappable: w
+                };
+            s[p] ? (s[p]("DOMContentLoaded", i, !1), f[p]("load", r, !1)) : (s[l]("onreadystatechange", o), f[l]("onload", r)), u("mark", ["firstbyte", a()], null, "api");
+            var h = 0
+        }, {}]
+    }, {}, ["loader"]);
+    </script>
+    <link rel="alternate" href="http://www.urbanoutfitters.com/uk/index.jsp" hreflang="en-gb" />
+    <link rel="alternate" href="http://www.urbanoutfitters.com/uk/index.jsp" hreflang="en-ie" />
+    <link rel="alternate" href="http://www.urbanoutfitters.com/fr/index.jsp" hreflang="fr" />
+    <link rel="alternate" href="http://www.urbanoutfitters.com/fr/index.jsp" hreflang="fr-fr" />
+    <link rel="alternate" href="http://www.urbanoutfitters.com/de/index.jsp" hreflang="de" />
+    <link rel="alternate" href="http://www.urbanoutfitters.com/urban/index.jsp" hreflang="en-us" />
+    <link rel="alternate" href="http://www.urbanoutfitters.comhttp://www.urbanoutfitters.com/ca/en/index.jsp" hreflang="en-ca" />
+    <link rel="alternate" href="http://www.urbanoutfitters.com/ca/fr/index.jsp" hreflang="fr-ca" />
+    <link rel="alternate" href="http://www.urbanoutfitters.com/urban/index.jsp" hreflang="en" />
+    <link rel="alternate" href="android-app://com.urbanoutfitters.android/urbanout/shop" />
+    <link rel="alternate" href="ios-app://358821736/urbanout/shop" />
+    <link rel="canonical" href="http://www.urbanoutfitters.comhttp://www.urbanoutfitters.com/ca/en/index.jsp">
+    <link rel="apple-touch-icon-precomposed" href="http://www.urbanoutfitters.com/ca/en/images/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://www.urbanoutfitters.com/ca/en/images/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://www.urbanoutfitters.com/ca/en/images/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.urbanoutfitters.com/ca/en/images/apple-touch-icon-144x144-precomposed.png">
+    <link rel="shortcut icon" href="http://www.urbanoutfitters.com/ca/en/favicon.ico" type="image/x-icon" />
+    <!-- google font -->
+    <link href='https://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+    <!--[if !IE ]><!-->
+    <link rel="stylesheet" href="http://www.urbanoutfitters.com/ca/en/dest/css/common.min.css?v=20160912_11">
+    <!--<![endif]-->
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="http://www.urbanoutfitters.com/ca/en/dest/blessed/common.min.css?v=20160912_11">
+    <![endif]-->
+    <link rel="stylesheet" href="http://www.urbanoutfitters.com/ca/en/dest/css/common-gateways.css?v=20160912_11">
+    <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script>
+    window.jQuery || document.write("<script src=\"http://www.urbanoutfitters.com/ca/en/dest/js/jquery-1.10.1.min.js\"><\/script>");
+    </script>
+    <script>
+    var LOCALE = "ca";
+    var LOCALEWITHLANGUAGE = "ca/en";
+    var SCENE7URL = "//images.urbanoutfitters.com/is/image/UrbanOutfitters/";
+    var URBN_TIME = 1476917491657;
+    var URBN_DATE = new Date(1476917491657);
+    var LOCALE_CURRENCY = "en_CA_CAD";
+    var DEVICE = "desktop";
+    var ENV = "production";
+    </script>
+</head>
+<!--[if lt IE 9]>
+    <div class="ie-warning">UrbanOutfitters.com is not optimized for Internet Explorer 8.  Use another browser or upgrade here: <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank">http://windows.microsoft.com/en-us/internet-explorer/download-ie</a></div>
+<![endif]-->
+
+<body class="ca">
+    <div class="page-wrap">
+        <div class="black_overlay"></div>
+        <span class="header-nav-data" data-selected=""></span>
+        <div class="global-header-wrapper" ng-controller="ContentfulCtrl as globalHeader">
+            <div global-header></div>
+        </div>
+        <div class="header fixedsticky" ng-controller="HeaderCtrl as h">
+            <div ng-class="$root.showDefaultNav && 'urban-nav' || 'eu-nav'">
+                <div class="kumalle" style="font-family: Arial, sans-serif; position: absolute; margin-top: 10px; margin-left: 15px; font-size: 18px; font-weight: bold; color: #000000; z-index: 9999;">KUMALLE</div>
+                <div utility-nav-dropdown class="utility_wrapper" ng-include="'/' + h.locale + '/app/templates/global/partials/headerUtility.html'"></div>
+                <span class="header-nav-data" data-selected=""></span>
+                <div assign-current-nav-item define-nav-interaction class="outer-nav">
+                    <ul class="nav">
+                        <li>
+                            <div class="header-nav-womens" data-dpt="womens"><a class="header-nav-womens" data-dpt="womens" href="https://www.hollisterco.ca/shop/ca" tabindex="120" target="_blank"><span>First Stop</span></a></div>
+                        </li>
+                        <li>
+                            <div class="header-nav-mens" data-dpt="mens"><a class="header-nav-mens" data-dpt="mens" href="http://www.urbanoutfitters.com/urban/index.jsp" tabindex="130" target="_blank"><span>Second Stop</span></a></div>
+                        </li>
+                        <li>
+                            <div class="header-nav-apartment" data-dpt="apartment"><a class="header-nav-apartment" data-dpt="apartment" href="https://www.abercrombie.ca/shop/ca" tabindex="140" target="_blank"><span>Third Stop</span></a></div>
+                        </li>
+                        <li>
+                            <div class="header-nav-general_category" data-dpt="general_category"><a class="header-nav-general_category" data-dpt="general_category" href="https://www.amazon.ca/" tabindex="180" target="_blank"><span>Fourth Stop</span></a></div>
+                        </li>
+                        <li>
+                            <div class="header-nav-music" data-dpt="music"><a class="header-nav-music" data-dpt="music" href="http://www.hm.com/ca" tabindex="150" target="_blank"><span>Fifth Stop</span></a></div>
+                        </li>
+                        <li>
+                            <div class="header-nav-w_beauty" data-dpt="beauty"><a class="header-nav-w_beauty" data-dpt="beauty" href="http://www.uniqlo.com/ca/en/" tabindex="160" target="_blank"><span>Sixth Stop</span></a></div>
+                        </li>
+                        <li>
+                            <div class="header-nav-intimates" data-dpt="intimates"><a class="header-nav-intimates" data-dpt="intimates" href="https://thefaceshop.ca/" tabindex="170" target="_blank"><span>Seventh Stop</span></a></div>
+                        </li>
+                        <li>
+                            <div class="header-nav-sale" data-dpt="sale"><a class="header-nav-sale" data-dpt="sale" href="https://www.softmoc.com/ca/" tabindex="190" target="_blank"><span>Finale!</span></a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="body ca">
+            <div class="header-promo-m">
+                <p>
+                    <a class="header-promo-link" href></a>
+                </p>
+                <div>
+                    <p></p>
+                </div>
+            </div>
+            <!-- base gateway stylesheet that shouldn't change weekly-->
+            <link href='http://www.urbanoutfitters.com/ca/en/dest/css/common-gateways.css' rel='stylesheet' type='text/css'>
+            <style>
+            /*Styles to change every week*/
+            
+            .gateway .hide-box {
+                display: none;
+            }
+            /*A request from Zoe, no shoptags to be revealed on home page | made on 12/9/16 */
+            
+            .gateway .box .shoptags.desktop-btn {
+                display: none;
+            }
+            
+            .gateway .main-features {
+                margin-top: 0;
+            }
+            /*Show shoptags on asset*/
+            
+            .gateway .box .shoptags.desktop-btn.dresses,
+            .gateway .box .shoptags.desktop-btn.Halloween {
+                display: block !important;
+            }
+            /*tablet/desktop*/
+            
+            @media only screen and (min-width: 40.063em) {
+                .home .uoonyou-section {
+                    margin-top: 80px;
+                }
+                .gateway .box .desktop-btn.sale-buttons {
+                    bottom: 12px;
+                }
+                .gateway .box .shoptags.desktop-btn.dresses {
+                    display: none !important;
+                }
+            }
+            
+            @media only screen and (min-width: 60.063em) {
+                .gateway .box .desktop-btn.sale-buttons {
+                    bottom: 20px;
+                }
+            }
+            </style>
+            <main class="content category">
+                <div class="gateway home ">
+                    <section class="main-features  addcm column-layout" data-cm-module="HOMEPAGE">
+                        <div class="row">
+                            <div class="small-24 medium-12 columns">
+                                <article class="box">
+                                    <!--[if lte IE 9]><video style="display: none;"><![endif]-->
+                                        <picture>
+                                            <source srcset="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_caen_1?scl=1&qlt=100" media="(min-width: 641px)" alt="Shop Women's">
+                                            <source srcset="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_m_caen_1?scl=1&qlt=100" alt="Shop Women's">
+                                            <img srcset="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_caen_1?scl=1&qlt=100" alt="Shop Women's">
+                                            <!--[if lte IE 9]></video><![endif]-->
+                                            <!--[if lte IE 9]>
+                            <img src="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_caen_1?scl=1&qlt=100" alt="">
+                        <![endif]-->
+                                        </picture>
+                                    
+                                    <div class="shoptags desktop-btn">
+                                        <span class="shop first">
+                        <a href="http://www.urbanoutfitters.com/ca/en/catalog/category.jsp?id=WOMENS" data-cm-position="WEEK_42_POSITION_1">Shop Women's</a>
+                    </span>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="small-24 medium-12 columns">
+                                <article class="box">
+                                    <!--[if lte IE 9]><video style="display: none;"><![endif]-->
+                                        <picture>
+                                            <source srcset="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_caen_2?scl=1&qlt=100" media="(min-width: 641px)" alt="Shop Men's">
+                                            <source srcset="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_m_caen_2?scl=1&qlt=100" alt="Shop Men's">
+                                            <img srcset="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_caen_2?scl=1&qlt=100" alt="Shop Men's">
+                                            <!--[if lte IE 9]></video><![endif]-->
+                                            <!--[if lte IE 9]>
+                            <img src="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_caen_2?scl=1&qlt=100" alt="">
+                        <![endif]-->
+                                        </picture>
+                                    
+                                    <div class="shoptags desktop-btn">
+                                        <span class="shop first">
+                        <a href="http://www.urbanoutfitters.com/ca/en/catalog/category.jsp?id=MENS" data-cm-position="WEEK_42_POSITION_2">Shop Men's</a>
+                    </span>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-24 medium-24 columns">
+                                <article class="box">
+                                    <!--[if lte IE 9]><video style="display: none;"><![endif]-->
+                                        <picture>
+                                            <source srcset="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_caen_3?scl=1&qlt=100" media="(min-width: 641px)" alt="Shop Apartment">
+                                            <source srcset="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_m_caen_3?scl=1&qlt=100" alt="Shop Apartment">
+                                            <img srcset="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_caen_3?scl=1&qlt=100" alt="Shop Apartment">
+                                            <!--[if lte IE 9]></video><![endif]-->
+                                            <!--[if lte IE 9]>
+                            <img src="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_caen_3?scl=1&qlt=100" alt="">
+                        <![endif]-->
+                                        </picture>
+                                    
+                                    <div class="shoptags desktop-btn">
+                                        <span class="shop first">
+                        <a href="http://www.urbanoutfitters.com/ca/en/catalog/category.jsp?id=APARTMENT" data-cm-position="WEEK_42_POSITION_3">Shop Apartment</a>
+                    </span>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-24 medium-8 columns">
+                                <article class="box">
+                                    <!--[if lte IE 9]><video style="display: none;"><![endif]-->
+                                        <picture>
+                                            <source srcset="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_caen_4?scl=1&qlt=100" media="(min-width: 641px)" alt="Shop Music">
+                                            <source srcset="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_m_caen_4?scl=1&qlt=100" alt="Shop Music">
+                                            <img srcset="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_caen_4?scl=1&qlt=100" alt="Shop Music">
+                                            <!--[if lte IE 9]></video><![endif]-->
+                                            <!--[if lte IE 9]>
+                            <img src="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_caen_4?scl=1&qlt=100" alt="">
+                        <![endif]-->
+                                        </picture>
+                                    
+                                    <div class="shoptags desktop-btn">
+                                        <span class="shop first">
+                        <a href="http://www.urbanoutfitters.com/ca/en/catalog/category.jsp?id=MUSIC" data-cm-position="WEEK_42_POSITION_4">Shop Music</a>
+                    </span>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="small-24 medium-8 columns">
+                                <article class="box">
+                                    <!--[if lte IE 9]><video style="display: none;"><![endif]-->
+                                        <picture>
+                                            <source srcset="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_caen_5?scl=1&qlt=100" media="(min-width: 641px)" alt="Shop Beauty">
+                                            <source srcset="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_m_caen_5?scl=1&qlt=100" alt="Shop Beauty">
+                                            <img srcset="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_caen_5?scl=1&qlt=100" alt="Shop Beauty">
+                                            <!--[if lte IE 9]></video><![endif]-->
+                                            <!--[if lte IE 9]>
+                            <img src="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_caen_5?scl=1&qlt=100" alt="">
+                        <![endif]-->
+                                        </picture>
+                                    
+                                    <div class="shoptags desktop-btn">
+                                        <span class="shop first">
+                        <a href="http://www.urbanoutfitters.com/ca/en/catalog/category.jsp?id=W_BEAUTY" data-cm-position="WEEK_42_POSITION_5">Shop Beauty</a>
+                    </span>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="small-24 medium-8 columns">
+                                <article class="box">
+                                    <!--[if lte IE 9]><video style="display: none;"><![endif]-->
+                                        <picture>
+                                            <source srcset="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_caen_6?scl=1&qlt=100" media="(min-width: 641px)" alt="Shop Intimates">
+                                            <source srcset="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_m_caen_6?scl=1&qlt=100" alt="Shop Intimates">
+                                            <img srcset="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_caen_6?scl=1&qlt=100" alt="Shop Intimates">
+                                            <!--[if lte IE 9]></video><![endif]-->
+                                            <!--[if lte IE 9]>
+                            <img src="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_caen_6?scl=1&qlt=100" alt="">
+                        <![endif]-->
+                                        </picture>
+                                    
+                                    <div class="shoptags desktop-btn">
+                                        <span class="shop first">
+                        <a href="http://www.urbanoutfitters.com/ca/en/catalog/category.jsp?id=INTIMATES" data-cm-position="WEEK_42_POSITION_6">Shop Intimates</a>
+                    </span>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <!-- ONE PICTUREFILL MODULE AT THE TOP OF THE "LOAD MORE" SECTION-->
+                        <div class="row">
+                            <div class="small-24 medium-12 columns">
+                                <article class="box box7">
+                                    <!--[if lte IE 9]><video style="display: none;"><![endif]-->
+                                        <picture>
+                                            <source srcset="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_caen_7?scl=1&qlt=100" media="(min-width: 641px)" alt="Shop Halloween">
+                                            <source srcset="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_m_caen_7?scl=1&qlt=100" alt="Shop Halloween">
+                                            <img srcset="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_caen_7?scl=1&qlt=100" alt="Shop Halloween">
+                                            <!--[if lte IE 9]></video><![endif]-->
+                                            <!--[if lte IE 9]>
+                            <img src="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_caen_7?scl=1&qlt=100" alt="">
+                        <![endif]-->
+                                        </picture>
+                                    
+                                    <div class="shoptags desktop-btn">
+                                        <span class="shop first">
+                            <a href="http://www.urbanoutfitters.com/ca/en/catalog/category.jsp?id=HALLOWEEN-ALL" data-cm-position="WEEK_42_POSITION_7">Shop Halloween</a>
+                        </span>
+                                    </div>
+                                </article>
+                            </div>
+                            <!-- LAZY LOADING STARTS HERE -->
+                            <div class="small-24 medium-12 columns">
+                                <article class="box box8">
+                                    <a href="http://blog.urbanoutfitters.com" data-cm-position="WEEK_42_POSITION_8">
+                                        <img src="//www.urbanoutfitters.com/images/white.gif " alt="Read More" class="img-lazyload" data-caen-mobile="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_m_caen_8?scl=1&qlt=100" data-caen-desktop="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_caen_8?scl=1&qlt=100">
+                                    </a>
+                                    <div class="shoptags desktop-btn">
+                                        <span class="shop first">
+                                    <a href="http://blog.urbanoutfitters.com" data-cm-position="WEEK_42_POSITION_8">Read More</a>
+                                </span>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-24 medium-24 columns">
+                                <article class="box box9">
+                                    <a href="http://www.urbanoutfitters.com/ca/en/uorewards/index.jsp" data-cm-position="WEEK_42_POSITION_9">
+                                        <img src="//www.urbanoutfitters.com/images/white.gif " alt="" class="img-lazyload" data-caen-mobile="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_m_caen_9?scl=1&qlt=100" data-caen-desktop="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_caen_9?scl=1&qlt=100">
+                                    </a>
+                                    <div class="shoptags desktop-btn">
+                                        <span class="shop first">
+                                    <a href="http://www.urbanoutfitters.com/ca/en/uorewards/index.jsp" data-cm-position="WEEK_42_POSITION_9"></a>
+                                </span>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="uoonyou-section addcm" data-cm-module="UOONYOU">
+                        <!-- <div class="headline"><img src="//www.urbanoutfitters.com/urban/images/UOonYOU.png"></div> -->
+                        <div class="uoonyou-img">
+                            <a href="http://www.urbanoutfitters.com/ca/en/uo-community">
+                                <img src="//www.urbanoutfitters.com/images/white.gif" class="img-lazyload" data-caen-desktop="//images.urbanoutfitters.com/is/image/UrbanOutfitters/160912_uocomm_hp_us?scl=1&qlt=100" />
+                                <img src="//www.urbanoutfitters.com/images/white.gif" class="img-lazyload" data-caen-mobile="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_m_us_ig?scl=1&qlt=100" data-caen-desktop="//images.urbanoutfitters.com/is/image/UrbanOutfitters/161017_hpgw_us_ig?scl=1&qlt=100" />
+                            </a>
+                        </div>
+                        <p class="hide-for-medium-up">Follow us on Instagram <a href="">@URBANOUTFITTERS</a></p>
+                        <p class="hide-for-small-only">This is Your UO: Your favorite looks, spaces, music and more, captured in Instagram photos and here to inspire.</p>
+                        <div class="shoptags">
+                            <span class="shop first">
+                <a href="http://www.urbanoutfitters.com/ca/en/uo-community" data-cm-position="WEEK_42_POSITION_1">View All</a>
+            </span>
+                        </div>
+                    </section>
+                </div>
+            </main>
+            <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": "WebSite",
+                "url": "http://www.urbanoutfitters.comhttp://www.urbanoutfitters.com/ca/en/index.jsp",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "http://www.urbanoutfitters.com/urban/catalog/search.jsp?q={q}",
+                    "query-input": "required name=q"
+                }
+            }
+            </script>
+        </div>
+        <div class="miniFooter ca/en">
+            <div handle-mini-footer-overlap class="row">
+                <div class="small-12 message columns">
+                    <div class="footer-tooltip">
+                        <span class="tooltip-activator"></span>
+                        <span class="tooltip-text"></span>
+                    </div>
+                </div>
+                <div class="small-4 columns language-select" ng-controller="LanguageToggleCtrl as tc" ng-cloak>
+                    <div class="toggleSummary">
+                        Language: {{tc.caLanguage}}
+                        <div class="toggleDropdownContainer">
+                            <div class="toggleLanguageSelector">
+                                <h4>{{strings.currencySwitcher.language}}</h4>
+                                <ul>
+                                    <li ng-repeat="(key, val) in tc.mainConfig.languageList.ca" ng-if="key !== locale">
+                                        <a href="{{val.langUrl}}">{{val.name}}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div handle-mini-footer-overlap class="row">
+                <div class="small-12 message columns">
+                    <div class="footer-tooltip">
+                        <span class="tooltip-activator"></span>
+                        <span class="tooltip-text"></span>
+                    </div>
+                </div>
+                <div class="small-4 columns language-select" ng-controller="LanguageToggleCtrl as tc" ng-cloak>
+                    <div class="toggleSummary">
+                        Language: {{tc.caLanguage}}
+                        <div class="toggleDropdownContainer">
+                            <div class="toggleLanguageSelector">
+                                <h4>{{strings.currencySwitcher.language}}</h4>
+                                <ul>
+                                    <li ng-repeat="(key, val) in tc.mainConfig.languageList.ca" ng-if="key !== locale">
+                                        <a href="{{val.langUrl}}">{{val.name}}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-full-wrapper">
+                <div class="row">
+                    <div class="small-2 columns">
+                        <h4>Help</h4>
+                        <ul class="links">
+                            <li class=""><a href="http://www.urbanoutfitters.com/ca/en/help/helpinfo.jsp?cm_sp=EXPANDED_FOOTER-_-HELP-_-helpinfo.jsp">Help + Info</a>
+                            </li>
+                            <li class=""><a href="http://www.urbanoutfitters.com/ca/en/user/login_order_status.jsp?cm_sp=EXPANDED_FOOTER-_-ORDERSTATUS-_-login_order_status.jsp">Order Status</a>
+                            </li>
+                            <li class=""><a href="http://www.urbanoutfitters.com/ca/en/help/ordering_payment.jsp?cm_sp=EXPANDED_FOOTER-_-ORDERPAYMENT-_-ordering_payment.jsp">Payment</a>
+                            </li>
+                            <li class=""><a href="http://www.urbanoutfitters.com/ca/en/help/shipping_information.jsp?cm_sp=EXPANDED_FOOTER-_-SHIPPINGINFO-_-shipping_information.jsp">Shipping</a>
+                            </li>
+                            <li class=""><a href="http://www.urbanoutfitters.com/ca/en/help/returns_exchanges.jsp?cm_sp=EXPANDED_FOOTER-_-RETURNS-_-returns_exchanges.jsp">Returns</a>
+                            </li>
+                            <li class=""><a href="http://www.urbanoutfitters.com/ca/en/help/contactus.jsp?cm_sp=EXPANDED_FOOTER-_-CONTACT-_-contactus.jsp">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="small-4 small-offset-2 columns">
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <ul class="links">
+                                <li class=""><a href="http://www.urbanoutfitters.com/ca/en/catalog/category.jsp?id=SHOP_GIFTCARDS&cm_sp=EXPANDED_FOOTER-_-SHOP_GIFTCARDS-_-SHOP_GIFTCARDS">Gift Cards</a>
+                                </li>
+                                <li class=""><a href="http://www.urbanoutfitters.com/ca/en/catalog/category.jsp?id=BRANDS&country=ca&cm_sp=EXPANDED_FOOTER-_-BRANDS-_-BRANDS">Brands</a>
+                                </li>
+                                <li class=""><a href="http://www.urbanoutfitters.com/ca/en/help/careers.jsp?cm_sp=EXPANDED_FOOTER-_-HELP-_-careers.jsp">Work @ Urban</a>
+                                </li>
+                                <li class=""><a href="http://www.urbanoutfitters.com/ca/en/uo-spaces">Spaces</a>
+                                    <li class=""><a href="/uk/index.jsp?language=en-GB&currency=200001&cm_sp=EXPANDED_FOOTER-_-SHOPEUROPE-_-index.jsp">Shop Europe</a>
+                                    </li>
+                                    <li><a class="siteChange-trigger">Shop United States</a>
+                                    </li>
+                            </ul>
+                        </div>
+                        <div class="find-a-store">
+                            <span class="icon-Map glyph"></span>
+                            <h4>Your Nearest Store</h4>
+                            <ul class="links brickworksapi">
+                                <li class="place-holder">Loading...</li>
+                                <li><a href="http://www.urbanoutfitters.com/ca/en/stores">Store Locator</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="small-4 small-offset-2 columns cheetah-form" ng-controller="CheetahCtrl as cc">
+                        <h4>Sign up for email</h4>
+                        <p>
+                            <input class="footerInput email" type="email" name="email" value="" placeholder="Email" ng-model="cc.customerEmail">
+                        </p>
+                        <p>
+                            <div class="dropdowner small-16 columns" ng-if="!mainConfig.siteVersion.mobile && !mainConfig.siteVersion.tablet" ng-class="{open : dropdowns.elems['gender-dd'].open && dropdowns.open}" id="gender-dd" fake-dropdown>
+                                <h3 class="dropdown-title" ng-class="cc.gender ? 'selected' : ''" ng-bind-html="cc.gender ? cc.genderDisplay : 'Gender'"></h3>
+                                <ul>
+                                    <li ng-repeat="g in cc.genderOptions" ng-click="cc.setGender($event)" ng-class="" data-gender="{{g.gender}}">{{g.display}}</li>
+                                </ul>
+                            </div>
+                            <input type="hidden" ng-model="cc.subsrciptionSource" ng-init="cc.subscriptionSource='Footer'">
+                            <input type="submit" value="Submit" class="small-8 columns end" ng-click="cc.signupFormSubmit()" />
+                        </p>
+                        <p ng-if="cc.responseMessage" class="response-message" ng-bind-html="cc.responseMessage"></p>
+                        <p class="disclaimer">By entering your email address, you agree to receive Urban Outfitters offers, promotions, and other commercial messages.</p>
+                        <p>You may <a href="http://www.urbanoutfitters.com/ca/en/signup/emailunsubscribe.jsp?cm_sp=EXPANDED_FOOTER-_-EMAIL_UNSUBSCRIBE-_-EMAIL_UNSUBSCRIBE">unsubscribe</a> at any time.</p>
+                    </div>
+                    <div class="small-5 small-offset-2 columns urban-on">
+                        <h4>UO Rewards</h4>
+                        <p>Get special offers, one-of-a-kind prizes, and more.
+                            <br>Join UO Rewards for a chance to win a $100 UO Gift Card.
+                            <br><a href="http://www.urbanoutfitters.com/ca/en/uorewards/index.jsp">Join Now</a></p>
+                        <div class="store-icons columns small-24">
+                            <h4>UO Apps</h4>
+                            <a href="http://itunes.apple.com/us/app/uo/id358821736?mt=8"><img src="http://www.urbanoutfitters.com/urban/images/apple-app-store.jpg" alt=""></a>
+                            <a href="http://play.google.com/store/apps/details?id=com.urbanoutfitters.android"><img src="http://www.urbanoutfitters.com/urban/images/google-app-store.png" alt=""></a>
+                            <a href="http://www.amazon.com/gp/product/B00VVUW7FY/ref=Urban_Outfitters"><img src="http://www.urbanoutfitters.com/urban/images/amazon-app-store.png" alt=""></a>
+                        </div>
+                        <div>
+                            <h4 class="social-header">Follow Us</h4>
+                            <ul class="social">
+                                <li class="left">
+                                    <a class="icon" target="_blank" href="http://instagram.com/urbanoutfitters?cm_sp=EXPANDED_FOOTER-_-SOCIAL-_-INSTAGRAM"><span class="icon-footer_instagram"></span><span class="text">Instagram</span></a>
+                                </li>
+                                <li class="left">
+                                    <a class="icon" target="_blank" href="https://www.facebook.com/urbanoutfitters?cm_sp=EXPANDED_FOOTER-_-SOCIAL-_-FACEBOOK"><span class="icon-footer_facebook glyph"></span><span class="text">Facebook</span></a>
+                                </li>
+                                <li class="left">
+                                    <a class="icon" target="_blank" href="http://www.pinterest.com/urbanoutfitters/happening-now?cm_sp=EXPANDED_FOOTER-_-SOCIAL-_-PINTEREST"><span class="icon-footer_pinterest glyph"></span><span class="hide">Pinterest</span></a>
+                                </li>
+                                <li class="left">
+                                    <a class="icon" target="_blank" href="http://twitter.com/urbanoutfitters?cm_sp=EXPANDED_FOOTER-_-SOCIAL-_-TWITTER"><span class="icon-footer_twitter glyph"></span><span class="text">Twitter</span></a>
+                                </li>
+                                <li class="left">
+                                    <a class="icon" target="_blank" href="http://www.snapchat.com/add/urbanout"><span class="icon-footer_snapchat"></span><span class="text">Snapchat</span></a>
+                                </li>
+                                <li class="left">
+                                    <a class="icon" target="_blank" href="http://www.youtube.com/user/uotv?cm_sp=EXPANDED_FOOTER-_-SOCIAL-_-YOUTUBE"><span class="icon-footer_youtube glyph"></span><span class="text">YouTube</span></a>
+                                </li>
+                                <li class="left">
+                                    <a class="icon" target="_blank" href="http://urbanoutfitters.tumblr.com?cm_sp=EXPANDED_FOOTER-_-SOCIAL-_-TUMBLR"><span class="icon-footer_tumblr glyph"></span><span class="text">Tumblr</span></a>
+                                </li>
+                                <li class="left">
+                                    <a class="icon" target="_blank" href="https://play.spotify.com/user/urbanoutfitters?cm_sp=EXPANDED_FOOTER-_-SOCIAL-_-SPOTIFY"><span class="icon-footer_spotify glyph"></span><span class="text">Spotify</span></a>
+                                </li>
+                                <li class="left">
+                                    <a class="icon" target="_blank" href="https://plus.google.com/110354638517892466353/posts?cm_sp=EXPANDED_FOOTER-_-SOCIAL-_-GOOGLEPLUS"><span class="icon-footer_google glyph"></span><span class="text">Google+</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row bottom-links">
+                    <div class="small-8 columns general-links">
+                        <ul>
+                            <li><a href="http://www.urbanoutfitters.com/ca/en/help/privacy_security.jsp?cm_sp=EXPANDED_FOOTER-_-PRIVACY-_-privacy_security.jsp">Privacy Policy</a>
+                            </li>
+                            <li><a href="http://www.urbanoutfitters.com/ca/en/help/terms_of_use.jsp?cm_sp=EXPANDED_FOOTER-_-TERMSOFUSE-_-terms_of_use.jsp">Terms of Use</a>
+                            </li>
+                            <li><a class="recall-link" href="http://www.urbanoutfitters.com/ca/en/images/Recall.pdf">Recall</a>
+                            </li>
+                            <li><a href="http://urbn.com/doc/California-Transparency-in-Supply-Chain-Act-URBN.pdf?&cm_sp=EXPANDED_FOOTER-_-CANOTICE-_-CANOTICE">CA Notice</a>
+                            </li>
+                            <li><a href="http://urbn.com/?cm_sp=EXPANDED_FOOTER-_-URBN-_-URBN">URBN.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="small-5 columns copyright">
+                        <p>&copy; 2016 UrbanOutfitters.com All Rights Reserved</p>
+                    </div>
+                </div>
+                <!-- <div class="row">
+
+        <div class="small-8 columns">
+
+            not sure if we need these
+
+            <div id="hiddenSitespect" style="display:none;">
+                <p id="hiddenSiteSpect_slot1"></p>
+                <p id="hiddenSiteSpect_slot2"></p>
+                <p id="hiddenSiteSpect_slot3"></p>
+            </div>
+
+        </div>
+
+    </div>
+-->
+            </div>
+        </footer>
+        <script>
+        var EDGE_LAT = "53.55";
+        var EDGE_LNG = "-113.50";
         </script>
-    </body>
+        <script src="http://www.urbanoutfitters.com/ca/dest/js/modernizr.custom.js?v=20160912_11"></script>
+        <script type="text/javascript">
+        var utag_data = {
+            customer_id: "_PHL6090454108",
+            customer_type: "New",
+            loyalty_id: "N",
+            sterling_id: "",
+            declined_loyalty_interstitial: "false",
+            site_version: "Desktop Site",
+            site_currency: "en_CA_CAD",
+            site_region: "ca",
+            site_language: "en-CA",
+            is_app: "false",
+            app_type: "",
+
+
+            customer_address_zip: "T5A",
+            customer_email_hash: "",
+            referral_source: "",
+            promo_id: "1",
+            page_type: "home"
+
+        }
+        </script>
+        <script src="http://www.urbanoutfitters.com/ca/en/dest/js/common.min.js?v=20160912_11"></script>
+        <!-- TeaLeaf -->
+        <script defer src="http://www.urbanoutfitters.com/ca/en/dest/js/tealeaf.js"></script>
+        <!-- Channel Advisor -->
+        <script defer>
+        document.write("<img src=\"" + document.location.protocol + "//tracking.searchmarketing.com/welcome.asp?SMCID=53000704&x=" + escape(document.referrer) + "\" width=\"1\" height=\"1\" style=\"display: none;\">");
+        </script>
+        <!-- Tealium -->
+        <script>
+        // create the tealium script tag
+        var host = window.location.host;
+        var env = (host.indexOf("www.urbanoutfitters.com") > -1) ? "prod" : (host.indexOf("staging") > -1) ? "qa" : "dev";
+
+        var loc = (typeof LOCALE === "string") && (LOCALE === "urban") ? 'uo-us-responsive' :
+            (typeof LOCALE === "string") && (LOCALE === "ca") ? 'uo-canada' : 'uo-eu-responsive';
+        (function(a, b, c, d) {
+            if (typeof TEALIUM_CONSTRUCTOR === "undefined") {
+                a = '//tags.tiqcdn.com/utag/urbanoutfitters/' + loc + '/' + env + '/utag.js';
+                b = document;
+                c = 'script';
+                d = b.createElement(c);
+                d.src = a;
+                d.type = 'text/java' + c;
+                d.async = true;
+                a = b.getElementsByTagName(c)[0];
+                a.parentNode.insertBefore(d, a);
+            }
+        })();
+        </script>
+        <form name="logout" action="http://www.urbanoutfitters.com/ca/en/common/#" method="GET">
+            <input name="_dyncharset" value="utf-8" type="hidden"></input>
+            <input name="_dynSessConf" value="-7327798418938700343" type="hidden"></input>
+            <input name="/atg/userprofiling/ProfileFormHandler.logout" value="" type="hidden">
+            <input name="_D:/atg/userprofiling/ProfileFormHandler.logout" value=" " type="hidden">
+            <input name="/atg/userprofiling/ProfileFormHandler.logoutSuccessURL" value="/ca/user/checkout_login.jsp" type="hidden">
+            <input name="_D:/atg/userprofiling/ProfileFormHandler.logoutSuccessURL" value=" " type="hidden">
+            <input name="/atg/userprofiling/ProfileFormHandler.logoutErrorURL" value="http://www.urbanoutfitters.com/ca/en/index.jsp" type="hidden">
+            <input name="_D:/atg/userprofiling/ProfileFormHandler.logoutErrorURL" value=" " type="hidden">
+            <input name="_DARGS" value="/common/footer_scripts.jsp.1" type="hidden"></input>
+        </form>
+        <script src="http://www.urbanoutfitters.com/ca/en/app/dest/vendorScripts.js?v=20160912_11"></script>
+        <!-- Include angular locale-specific files -->
+        <script src="http://www.urbanoutfitters.com/ca/en/app/localeshttp://www.urbanoutfitters.com/ca/en/angular-locale.js?v=20160912_11"></script>
+        <script src="http://www.urbanoutfitters.com/ca/en/app/localeshttp://www.urbanoutfitters.com/ca/en/config.js?v=20160912_11"></script>
+        <script src="http://www.urbanoutfitters.com/ca/en/app/dest/appScripts.js?v=20160912_11" id="angular-scripts"></script>
+        <script src="http://www.urbanoutfitters.com/ca/en/app/localeshttp://www.urbanoutfitters.com/ca/en/templateCache.js?v=20160912_11"></script>
+    </div>
+    <script type="text/javascript">
+    window.NREUM || (NREUM = {});
+    NREUM.info = {
+        "applicationID": "1518973",
+        "applicationTime": 28,
+        "beacon": "bam.nr-data.net",
+        "queueTime": 0,
+        "licenseKey": "904d37fb68",
+        "transactionName": "ZF0HYBBTDURQUUBRDV0XL2cyHQpZVVdMFghASA==",
+        "agent": "",
+        "errorBeacon": "bam.nr-data.net"
+    }
+    </script>
+</body>
+
+</html>
+</div>
+</body>
+
 </html>
