@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.wrapper {
+  position: absolute;
+  top: 10%;
+  width: 50%;
+  left: calc(50% - 285px);
+}
+
+.main {
+  margin: auto;
+  position: relative;
+  font-family: 'Open Sans', Arial, sans-serif;
+  color: #455565;
+}
+
+.name {
+  font-size: 35px;
+  line-height: 2;
+  padding-bottom: 15px;
+  position: relative;
+  text-align: center;
+  color: #333;
+}
+
+.desc {
+  font-size: 22px;
+  line-height: 2;
+  position: relative;
+}
+
+.social-media {
+  padding-top: 20px;
+  position: relative;
+  font-size: 22px;
+  margin: auto;
+  text-align: center;
+}
+
+.social-media a {
+  padding: 0 20px;
+  display: inline-block;
+}
+
+a {
+  color: #006ad4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
