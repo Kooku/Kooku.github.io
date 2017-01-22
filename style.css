@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 .wrapper {
-  position: absolute;
-  top: 10%;
+  position: relative;
   width: 50%;
-  left: calc(50% - 285px);
+  margin: auto;
+  margin-top: 80px;
 }
 
 .main {
