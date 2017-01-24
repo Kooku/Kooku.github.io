@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
+body {
+  margin: 0;
+  border-top: 80px solid #80bfff;
+}
+
 .wrapper {
   position: relative;
   width: 50%;
