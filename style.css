@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
 body {
   margin: 0;
   border-top: 80px solid #80bfff;
@@ -15,7 +13,7 @@ body {
 .main {
   margin: auto;
   position: relative;
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   color: #455565;
 }
 

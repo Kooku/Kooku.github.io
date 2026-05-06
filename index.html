@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" type "text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Ku Young Shin</title>
 </head>
 
@@ -19,6 +19,50 @@
             </div>
         </div>
     </div>
+    <script>
+        (function () {
+            var loaded = false;
+            var loading = false;
+
+            function loadTypingDuel() {
+                if (loaded) {
+                    window.TypingDuel.open();
+                    return;
+                }
+
+                if (loading) return;
+                loading = true;
+
+                var stylesheet = document.createElement('link');
+                stylesheet.rel = 'stylesheet';
+                stylesheet.href = 'typing-duel.css';
+                document.head.appendChild(stylesheet);
+
+                var script = document.createElement('script');
+                script.src = 'typing-duel.js';
+                script.defer = true;
+                script.onload = function () {
+                    loaded = true;
+                    loading = false;
+                    window.TypingDuel.open();
+                };
+                document.body.appendChild(script);
+            }
+
+            document.addEventListener('keydown', function (event) {
+                var target = event.target;
+                var isEditable = target && (
+                    target.tagName === 'INPUT' ||
+                    target.tagName === 'TEXTAREA' ||
+                    target.isContentEditable
+                );
+
+                if (!isEditable && event.key.toLowerCase() === 'g') {
+                    loadTypingDuel();
+                }
+            });
+        }());
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,169 @@
+.typing-duel-backdrop {
+  align-items: center;
+  background: rgba(16, 24, 32, 0.64);
+  bottom: 0;
+  display: none;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  justify-content: center;
+  left: 0;
+  padding: 24px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.typing-duel-backdrop.is-open {
+  display: flex;
+}
+
+.typing-duel {
+  background: #fbfcfd;
+  border: 1px solid #d8e0e8;
+  border-radius: 8px;
+  box-shadow: 0 22px 60px rgba(12, 24, 36, 0.28);
+  color: #263443;
+  max-width: 720px;
+  padding: 22px;
+  width: min(720px, 100%);
+}
+
+.typing-duel-top,
+.typing-duel-actions,
+.typing-duel-stats {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.typing-duel-top {
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.typing-duel-title {
+  color: #1d2b39;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.typing-duel-close,
+.typing-duel-button {
+  background: #ffffff;
+  border: 1px solid #c8d4df;
+  border-radius: 6px;
+  color: #263443;
+  cursor: pointer;
+  font: inherit;
+  height: 38px;
+  padding: 0 12px;
+}
+
+.typing-duel-close {
+  font-size: 22px;
+  line-height: 1;
+  width: 38px;
+}
+
+.typing-duel-button.primary {
+  background: #006ad4;
+  border-color: #006ad4;
+  color: #ffffff;
+}
+
+.typing-duel-button:disabled {
+  cursor: default;
+  opacity: 0.52;
+}
+
+.typing-duel-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 18px;
+}
+
+.typing-duel-stat {
+  background: #eef4f8;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.typing-duel-label {
+  color: #607080;
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0;
+  margin-bottom: 2px;
+}
+
+.typing-duel-value {
+  color: #1d2b39;
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.typing-duel-prompt {
+  background: #17212b;
+  border-radius: 8px;
+  color: #d6e2ee;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 21px;
+  line-height: 1.7;
+  min-height: 86px;
+  padding: 16px;
+}
+
+.typing-duel-prompt .done {
+  color: #7bd88f;
+}
+
+.typing-duel-prompt .current {
+  background: #e6c84f;
+  color: #17212b;
+}
+
+.typing-duel-prompt .miss {
+  color: #ff7a90;
+}
+
+.typing-duel-input {
+  border: 1px solid #b8c7d4;
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: #263443;
+  font: 18px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  margin: 14px 0;
+  padding: 12px;
+  width: 100%;
+}
+
+.typing-duel-result {
+  color: #455565;
+  line-height: 1.5;
+  min-height: 24px;
+}
+
+.typing-duel-actions {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-top: 14px;
+}
+
+@media (max-width: 640px) {
+  .typing-duel-backdrop {
+    padding: 14px;
+  }
+
+  .typing-duel {
+    padding: 16px;
+  }
+
+  .typing-duel-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .typing-duel-prompt {
+    font-size: 17px;
+  }
+}
